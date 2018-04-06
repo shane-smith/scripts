@@ -1,0 +1,30 @@
+# Automatically enters the work package prefix in a commit message.
+# @author Shane Smith <shane@communityds.com.au>
+# Created: Nov-Dec 2016
+#   
+# This function also accepts a commit message WITHOUT quotes,
+# but it only works correctly if there are no special characters.
+# Therefore, quotes are included in the example given.
+branch=$(git symbolic-ref --short HEAD 2> /dev/null)
+if [ -z $branch ]; then
+    # If we cannot find the branch
+    echo "ERROR: No GIT repository was found!"
+elif [ "$branch" == "develop" ]; then
+    # Develop branch detected
+    echo "ERROR: You are on develop!"
+elif [ "$branch" == "master" ]; then
+    # Master branch detected
+    echo "ERROR: You are on master!"
+else
+    work_package="${branch/lp/}"
+    prefix="lp #$work_package -"
+
+    if [ $# -gt 0 ]; then
+        git commit -m "$prefix $*"
+        logs 3
+    else
+        echo "Please provide a commit message. Typing [ commit \"<message>\" ] will result in:"
+        echo "  git commit -m '$prefix <message>'"
+    fi  
+fi  
+
