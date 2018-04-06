@@ -1,0 +1,9 @@
+# Reports are stored in a shared directory, and often need to be found by their filename.
+# This is a quick wrapper around the 'find' command to do that.
+
+if [ $1 ]; then
+    echo
+    find /var/www/html/reports -name $1
+else
+    echo "Usage: findreport <ReportName>"
+fi
