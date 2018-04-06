@@ -9,7 +9,7 @@ Clone the repository:
 
 Then add the scripts directory to your path, by adding something like the following to your `.bashrc` or `.bash_profile`:
 
-```PATH=$PATH:$HOME/scripts```
+```PATH=$PATH:$HOME/scripts/bin```
 
 The above line assumes that you checked out this repository into your home directory.
 
