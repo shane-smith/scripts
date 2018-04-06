@@ -43,7 +43,9 @@ I often use this command in lieu of a `git commit --amend`.
 
 #### logs
 
-I love running `git log -n 10 --oneline` so much, that I wrote an alias for it: logs. This alias has been converted into a dedicated 
+I love running `git log -n 10 --oneline` so much, that I wrote an alias for it: logs. This alias has been converted into a dedicated script, so that I could add it to this repository as a separate file.
+
+Feel free to make improvements to this if you wish! It would be a good beginner task, for anyone hoping to make a small contribution. 
 
 ### Other
 
