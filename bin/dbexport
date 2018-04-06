@@ -1,0 +1,11 @@
+#
+# Export a MySQL database to an SQL file using mysqldump
+#
+
+if [ $# -eq 2 ]; then
+    mysqldump -uroot -p $1 > $2; 
+    echo "Exported the $1 database to $2"
+else
+    echo "Usage: dbexport DATABASE_NAME FILE_NAME.sql"
+fi
+
