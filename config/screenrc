@@ -1,0 +1,8 @@
+# Configuration for .screenrc
+# @author Shane Smith
+
+term xterm-color
+
+# Captions and messages
+caption always '%{= wK}%3n %t%20=[%+01=%{+ .k}%-w%50L>%{=b BW}%n* %t%{-}%+w%{-}%-17<]%-15=%H %-06=%{+ .b}%c'
+hardstatus string '[%H:%n] %t'
