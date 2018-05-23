@@ -15,7 +15,9 @@ The above line assumes that you checked out this repository into your home direc
 
 ## Contributions
 
-Feel free to fork and add your own scripts, then submit a pull request! You'll be listed clearly as a contributor in this readme.
+Feel free to fork and add your own scripts, then submit a pull request!
+
+See CONTRIBUTING.md for further details.
 
 ## Available Scripts
 
