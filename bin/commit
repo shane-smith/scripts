@@ -1,10 +1,11 @@
-# Automatically enters the work package prefix in a commit message.
-# @author Shane Smith <shane@communityds.com.au>
-# Created: Nov-Dec 2016
-#   
-# This function also accepts a commit message WITHOUT quotes,
-# but it only works correctly if there are no special characters.
-# Therefore, quotes are included in the example given.
+# Automatically enters the issue number in a commit message,
+# based on a branch name like 'lp1234' to mean issue '1234'.
+#
+# If the develop or master branch is detected, committing is blocked.
+# 
+# Accepts a commit message with or without quotes, but the 
+# non-quoted messages only work correctly with no special characters.
+#
 branch=$(git symbolic-ref --short HEAD 2> /dev/null)
 if [ -z $branch ]; then
     # If we cannot find the branch

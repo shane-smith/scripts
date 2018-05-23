@@ -1,7 +1,6 @@
 #
 # Create an empty MySQL database with the given name
 #
-
 if [ $1 ]; then
     mysql -e "CREATE DATABASE $1;"
     echo "Created database $1"

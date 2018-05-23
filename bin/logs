@@ -1,5 +1,8 @@
 # Nice little shortcut. Type 'logs' to see quick summary of 10 commits,
 # or type 'logs <num>' to see a summary with number of commits you specify.
+# 
+# Works best if you have colours enabled for your Git output.
+#
 logs () {
     local LINES=${1:-10}
     echo

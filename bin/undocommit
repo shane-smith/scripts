@@ -3,7 +3,7 @@
 # 
 # This is ONLY safe to use if you have not pushed yet. DO NOT use this if the most recent commit has already been pushed to the remote server.
 # This also only works for standard commits. Do not try to undo a merge.
-
+#
 cmd="git reset HEAD~1 --soft"
 echo "CMD: $cmd"
 eval $cmd
