@@ -49,6 +49,37 @@ I love running `git log -n 10 --oneline` so much, that I wrote an alias for it: 
 
 Feel free to make improvements to this if you wish! It would be a good beginner task, for anyone hoping to make a small contribution. 
 
+### Database
+
+Some of the database scripts are designed to work with a `mysql` alias (e.g. `alias mysql='mysql -uroot -p'`), so you will not see any references to the username or password prompts in these helpers, and will instead see a reference to the `mysql` alias instead.
+
+Room for improvement:
+* Most of these scripts do not do any error checking (i.e. does the database exist?). They could be expanded to do this in the future.
+* The `dbexport` and `dbimport` scripts could be updated to optionally save to a gzipped file rather than as uncompressed SQL.
+
+#### dbcreate
+
+Parameters:
+1. Database name
+
+Creates a database with the specified name.
+
+#### dbexport
+
+Parameters:
+1. Database name
+2. Filename
+
+Uses `mysqldump` to generate a SQL file with the structure and data of the given database. Saves it to a file with the provided filename.
+
+#### dbimport
+
+Parameters:
+1. Database name
+2. Filename
+
+Restores the output of the `dbexport` script into a database with the specified name. This can be used in conjunction with `dbexport` to dump a copy of one database, and create another with the same content, effectively duplicating it.
+
 ### Other
 
 #### findreport
