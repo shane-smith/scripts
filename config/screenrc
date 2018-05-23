@@ -1,5 +1,4 @@
 # Configuration for .screenrc
-# @author Shane Smith
 
 term xterm-color
 
